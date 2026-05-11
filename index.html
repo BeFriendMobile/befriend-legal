@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité — BeFriend</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f7fa;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #00B2CA 0%, #0096AC 100%);
+      color: white;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .logo-name {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      opacity: 0.95;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 14px;
+      opacity: 0.75;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .toc {
+      background: white;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 32px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      border-left: 4px solid #00B2CA;
+    }
+
+    .toc h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #00B2CA;
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: #374151;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.15s;
+    }
+
+    .toc a:hover { color: #00B2CA; }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+
+    .card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h2 .num {
+      width: 30px;
+      height: 30px;
+      background: #e0f7fb;
+      color: #00B2CA;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .card p {
+      color: #374151;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    ul.items {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    ul.items li {
+      padding: 8px 0 8px 24px;
+      position: relative;
+      color: #374151;
+      font-size: 15px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    ul.items li:last-child { border-bottom: none; }
+
+    ul.items li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 17px;
+      width: 8px;
+      height: 8px;
+      background: #00B2CA;
+      border-radius: 50%;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e0f7fb;
+      color: #0096AC;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #e0f7fb 0%, #ccf0f5 100%);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .contact-box .icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .contact-box a {
+      color: #0096AC;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .contact-box a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: #9ca3af;
+      font-size: 13px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    footer a { color: #00B2CA; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      header { padding: 36px 16px 32px; }
+      .card { padding: 22px 18px; }
+      .toc { padding: 20px 18px; }
+      .container { padding: 28px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🤝</div>
+    <span class="logo-name">BeFriend</span>
+  </div>
+  <h1>Politique de confidentialité</h1>
+  <p>Dernière mise à jour : mai 2026</p>
+</header>
+
+<div class="container">
+
+  <div class="toc">
+    <h2>Sommaire</h2>
+    <ol>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#donnees">Données collectées</a></li>
+      <li><a href="#utilisation">Utilisation des données</a></li>
+      <li><a href="#partage">Partage des données</a></li>
+      <li><a href="#conservation">Conservation des données</a></li>
+      <li><a href="#securite">Sécurité</a></li>
+      <li><a href="#droits">Vos droits (RGPD)</a></li>
+      <li><a href="#mineurs">Données des mineurs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <div class="card" id="intro">
+    <h2>Introduction</h2>
+    <p>
+      Nous, l'équipe <strong>BeFriend</strong>, accordons une grande importance à la protection de vos données personnelles.
+      Cette politique explique quelles données nous collectons, pourquoi, comment nous les utilisons et quels sont vos droits.
+    </p>
+    <p>
+      En utilisant l'application BeFriend, vous acceptez les pratiques décrites dans la présente politique.
+    </p>
+  </div>
+
+  <div class="card" id="donnees">
+    <h2><span class="num">1</span> Données collectées</h2>
+    <ul class="items">
+      <li><strong>Compte :</strong> adresse e-mail, pseudo, mot de passe (haché), photo de profil.</li>
+      <li><strong>Localisation :</strong> position GPS précise, utilisée pour afficher les activités proches et calculer les distances. Désactivable depuis les paramètres de votre appareil.</li>
+      <li><strong>Photos et médias :</strong> photos importées pour votre profil ou vos activités.</li>
+      <li><strong>Messages :</strong> messages privés échangés via la messagerie en temps réel.</li>
+      <li><strong>Données sociales :</strong> connexions (amis, niveaux d'amitié), activités créées et rejointes.</li>
+      <li><strong>Données techniques :</strong> logs de connexion, informations sur l'appareil (modèle, OS) pour le bon fonctionnement de l'application.</li>
+    </ul>
+  </div>
+
+  <div class="card" id="utilisation">
+    <h2><span class="num">2</span> Utilisation des données</h2>
+    <p>Vos données sont utilisées exclusivement pour :</p>
+    <ul class="items">
+      <li>Vous permettre de créer un compte et de vous authentifier.</li>
+      <li>Afficher les activités et les utilisateurs proches de vous.</li>
+      <li>Faciliter la mise en relation avec vos amis.</li>
+      <li>Vous permettre d'envoyer et de recevoir des messages.</li>
+      <li>Améliorer les performances et la sécurité de l'application.</li>
+    </ul>
+  </div>
+
+  <div class="card" id="partage">
+    <h2><span class="num">3</span> Partage des données</h2>
+    <p><strong>Nous ne vendons pas vos données personnelles à des tiers.</strong></p>
+    <p>Vos données peuvent être partagées uniquement :</p>
+    <ul class="items">
+      <li>Avec les autres utilisateurs de l'application, dans la limite des fonctionnalités (votre pseudo et photo de profil sont visibles par les utilisateurs avec qui vous interagissez).</li>
+      <li>Avec nos prestataires techniques (hébergement OVH) dans le seul but de faire fonctionner l'application.</li>
+      <li>Si la loi l'exige (réquisitions judiciaires, obligations légales).</li>
+    </ul>
+  </div>
+
+  <div class="card" id="conservation">
+    <h2><span class="num">4</span> Conservation des données</h2>
+    <p>
+      Vos données sont conservées tant que votre compte est actif.
+    </p>
+    <p>
+      En cas de <strong>suppression de votre compte</strong> (disponible dans Paramètres → Supprimer mon compte),
+      toutes vos données personnelles sont supprimées dans un délai de <strong>30 jours</strong>,
+      à l'exception des données nécessaires au respect de nos obligations légales.
+    </p>
+  </div>
+
+  <div class="card" id="securite">
+    <h2><span class="num">5</span> Sécurité</h2>
+    <ul class="items">
+      <li>Vos données sont stockées sur des serveurs sécurisés (OVH, France).</li>
+      <li>Les mots de passe sont stockés sous forme <strong>hachée</strong> (bcrypt) et ne sont jamais lisibles.</li>
+      <li>L'authentification utilise des tokens JWT à durée limitée.</li>
+      <li>Les accès à l'API sont protégés par authentification.</li>
+    </ul>
+  </div>
+
+  <div class="card" id="droits">
+    <h2><span class="num">6</span> Vos droits <span class="badge">RGPD</span></h2>
+    <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+    <ul class="items">
+      <li><strong>Droit d'accès :</strong> consultez vos données depuis votre profil dans l'application.</li>
+      <li><strong>Droit de rectification :</strong> modifiez vos informations dans les Paramètres.</li>
+      <li><strong>Droit à l'effacement :</strong> supprimez votre compte depuis Paramètres → "Supprimer mon compte". Toutes vos données seront définitivement effacées.</li>
+      <li><strong>Droit à la portabilité et à la limitation :</strong> contactez-nous pour toute demande spécifique.</li>
+    </ul>
+  </div>
+
+  <div class="card" id="mineurs">
+    <h2><span class="num">7</span> Données des mineurs</h2>
+    <p>
+      BeFriend est destiné aux personnes âgées de <strong>13 ans et plus</strong>.
+      Nous ne collectons pas sciemment de données personnelles concernant des enfants de moins de 13 ans.
+    </p>
+    <p>
+      Si vous avez connaissance qu'un enfant nous a fourni des données sans consentement parental, contactez-nous immédiatement.
+    </p>
+  </div>
+
+  <div class="card" id="contact">
+    <h2><span class="num">8</span> Contact</h2>
+    <p>Pour toute question relative à vos données personnelles :</p>
+    <div class="contact-box">
+      <span class="icon">✉️</span>
+      <div>
+        <div style="font-size:13px;color:#6b7280;margin-bottom:2px;">Adresse e-mail</div>
+        <a href="mailto:befriend.app.contact@gmail.com">befriend.app.contact@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 BeFriend — Tous droits réservés ·
+  <a href="index.html">Politique de confidentialité</a>
+</footer>
+
+</body>
+</html>
