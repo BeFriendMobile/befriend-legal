@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suppression de compte — BeFriend</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f7fa;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #00B2CA 0%, #0096AC 100%);
+      color: white;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .logo-name {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      opacity: 0.95;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 14px;
+      opacity: 0.75;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+
+    .card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h2 .num {
+      width: 30px;
+      height: 30px;
+      background: #e0f7fb;
+      color: #00B2CA;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .card p {
+      color: #374151;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .steps {
+      list-style: none;
+      padding: 0;
+      margin-top: 8px;
+      counter-reset: steps;
+    }
+
+    .steps li {
+      counter-increment: steps;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f3f4f6;
+      font-size: 15px;
+      color: #374151;
+    }
+
+    .steps li:last-child { border-bottom: none; }
+
+    .steps li::before {
+      content: counter(steps);
+      min-width: 28px;
+      height: 28px;
+      background: #00B2CA;
+      color: white;
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .alert {
+      background: #fff8e1;
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #92400e;
+      margin-top: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
+    th {
+      background: #f3f4f6;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #f3f4f6;
+      color: #4b5563;
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .badge-del {
+      display: inline-block;
+      background: #fee2e2;
+      color: #b91c1c;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+
+    .badge-keep {
+      display: inline-block;
+      background: #fef9c3;
+      color: #92400e;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #e0f7fb 0%, #ccf0f5 100%);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .contact-box .icon { font-size: 28px; flex-shrink: 0; }
+
+    .contact-box a {
+      color: #0096AC;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .contact-box a:hover { text-decoration: underline; }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #00B2CA;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .nav-link:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: #9ca3af;
+      font-size: 13px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    footer a { color: #00B2CA; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      header { padding: 36px 16px 32px; }
+      .card { padding: 22px 18px; }
+      .container { padding: 28px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🤝</div>
+    <span class="logo-name">BeFriend</span>
+  </div>
+  <h1>Suppression de compte</h1>
+  <p>Comment supprimer votre compte et vos données</p>
+</header>
+
+<div class="container">
+
+  <a class="nav-link" href="index.html">← Politique de confidentialité</a>
+
+  <div class="card">
+    <h2><span class="num">1</span> Depuis l'application (méthode recommandée)</h2>
+    <p>Vous pouvez supprimer votre compte directement depuis l'application <strong>BeFriend</strong> en quelques secondes :</p>
+    <ol class="steps">
+      <li>Ouvrez l'application BeFriend et connectez-vous à votre compte.</li>
+      <li>Appuyez sur l'icône <strong>Profil</strong> en bas à droite.</li>
+      <li>Appuyez sur l'icône <strong>Paramètres</strong> (engrenage) en haut à droite.</li>
+      <li>Faites défiler jusqu'en bas de la page.</li>
+      <li>Appuyez sur <strong>"Supprimer mon compte"</strong>.</li>
+      <li>Confirmez la suppression dans la boîte de dialogue.</li>
+    </ol>
+    <div class="alert">
+      ⚠️ Cette action est <strong>irréversible</strong>. Une fois confirmée, toutes vos données sont définitivement supprimées.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">2</span> Par e-mail (si vous n'avez plus accès à l'app)</h2>
+    <p>Si vous n'avez plus accès à votre compte, envoyez une demande par e-mail :</p>
+    <div class="contact-box">
+      <span class="icon">✉️</span>
+      <div>
+        <div style="font-size:13px;color:#6b7280;margin-bottom:4px;">Envoyez votre demande à</div>
+        <a href="mailto:befriend.app.contact@gmail.com">befriend.app.contact@gmail.com</a>
+        <div style="font-size:13px;color:#6b7280;margin-top:6px;">Objet : <strong>Suppression de compte BeFriend</strong><br>Indiquez l'adresse e-mail associée à votre compte.</div>
+      </div>
+    </div>
+    <p style="margin-top:14px;">Nous traiterons votre demande dans un délai de <strong>7 jours ouvrés</strong>.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">3</span> Données supprimées et conservées</h2>
+    <p>Voici ce qui est supprimé ou conservé lors de la suppression de votre compte :</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type de données</th>
+          <th>Traitement</th>
+          <th>Délai</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Profil (pseudo, email, photo)</td>
+          <td><span class="badge-del">Supprimé</span></td>
+          <td>Immédiat</td>
+        </tr>
+        <tr>
+          <td>Activités créées</td>
+          <td><span class="badge-del">Supprimé</span></td>
+          <td>Immédiat</td>
+        </tr>
+        <tr>
+          <td>Messages envoyés</td>
+          <td><span class="badge-del">Supprimé</span></td>
+          <td>Immédiat</td>
+        </tr>
+        <tr>
+          <td>Connexions (amis)</td>
+          <td><span class="badge-del">Supprimé</span></td>
+          <td>Immédiat</td>
+        </tr>
+        <tr>
+          <td>Localisation</td>
+          <td><span class="badge-del">Supprimé</span></td>
+          <td>Immédiat</td>
+        </tr>
+        <tr>
+          <td>Logs techniques (sécurité)</td>
+          <td><span class="badge-keep">Conservé</span></td>
+          <td>30 jours max</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 BeFriend — Tous droits réservés ·
+  <a href="index.html">Politique de confidentialité</a>
+</footer>
+
+</body>
+</html>
